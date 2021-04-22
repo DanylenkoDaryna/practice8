@@ -21,9 +21,13 @@ public class Demo {
     public static void main(String[] args) throws SQLException, DBException{
         try {
             LogManager.getLogManager().readConfiguration(
+
                     Demo.class.getResourceAsStream("/logging.properties"));
+
         } catch (IOException e) {
+
             System.err.println("Could not setup logger configuration: " + e);
+
         }
 
         // users  ==> [ivanov]
@@ -83,5 +87,6 @@ public class Demo {
         System.out.println(dbManager.updateTeam(teamC));
         printList(dbManager.findAllTeams());
         // teams ==> [teamB, teamX]
+
     }
 }
