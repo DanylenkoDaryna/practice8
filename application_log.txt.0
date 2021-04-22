@@ -1,0 +1,33 @@
+жовт. 27, 2019 3:03:16 PM ua.nure.danylenko.practice8.db.DBManager setTeamForUser
+SEVERE: Failed in method setTeamForUser(): 
+java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '3-1' for key 'PRIMARY'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:117)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1092)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1040)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1340)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1025)
+	at ua.nure.danylenko.practice8.db.DBManager.setTeamForUser(DBManager.java:234)
+	at ua.nure.danylenko.practice8.db.DBManager.setTeamsForUser(DBManager.java:203)
+	at ua.nure.danylenko.practice8.Demo.main(Demo.java:64)
+
+жовт. 27, 2019 3:03:16 PM ua.nure.danylenko.practice8.db.DBManager setTeamsForUser
+SEVERE: Failed commit in method setTeamsForUser(): 
+ua.nure.danylenko.practice8.db.DBException: DB setTeamForUser() problem
+	at ua.nure.danylenko.practice8.db.DBManager.setTeamForUser(DBManager.java:239)
+	at ua.nure.danylenko.practice8.db.DBManager.setTeamsForUser(DBManager.java:203)
+	at ua.nure.danylenko.practice8.Demo.main(Demo.java:64)
+Caused by: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '3-1' for key 'PRIMARY'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:117)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1092)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1040)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1340)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1025)
+	at ua.nure.danylenko.practice8.db.DBManager.setTeamForUser(DBManager.java:234)
+	... 2 more
+

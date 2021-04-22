@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="slf4j-api-1.7">
+    <CLASSES>
+      <root url="file://C:/tomcat/slf4j-api-1.7.28" />
+      <root url="file://C:/tomcat/slf4j-log4j12-1.7.28" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

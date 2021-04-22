@@ -1,0 +1,1 @@
+connection.url=jdbc:mysql://127.0.0.1/p8?user=root&password=&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC

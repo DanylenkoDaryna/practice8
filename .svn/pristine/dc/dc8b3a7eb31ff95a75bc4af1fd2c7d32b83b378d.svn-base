@@ -1,0 +1,30 @@
+2019-10-25 12:56:32.113 [main] INFO  ua.nure.danylenko.practice8.db.DBManager - app.properties
+2019-10-25 12:56:32.862 [main] ERROR ua.nure.danylenko.practice8.db.DBManager - Failed in method setTeamForUser(): 
+java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '3-1' for key 'PRIMARY'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:117) ~[mysql-connector-java-8.0.17.jar:8.0.17]
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97) ~[mysql-connector-java-8.0.17.jar:8.0.17]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-java-8.0.17.jar:8.0.17]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953) ~[mysql-connector-java-8.0.17.jar:8.0.17]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1092) ~[mysql-connector-java-8.0.17.jar:8.0.17]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1040) ~[mysql-connector-java-8.0.17.jar:8.0.17]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1340) ~[mysql-connector-java-8.0.17.jar:8.0.17]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1025) ~[mysql-connector-java-8.0.17.jar:8.0.17]
+	at ua.nure.danylenko.practice8.db.DBManager.setTeamForUser(DBManager.java:225) [Practice8/:?]
+	at ua.nure.danylenko.practice8.db.DBManager.setTeamsForUser(DBManager.java:196) [Practice8/:?]
+	at ua.nure.danylenko.practice8.Demo.main(Demo.java:55) [Practice8/:?]
+2019-10-25 12:56:32.871 [main] ERROR ua.nure.danylenko.practice8.db.DBManager - Failed commit in method setTeamsForUser(): 
+ua.nure.danylenko.practice8.db.DBException: DB setTeamForUser() problem
+	at ua.nure.danylenko.practice8.db.DBManager.setTeamForUser(DBManager.java:229) ~[Practice8/:?]
+	at ua.nure.danylenko.practice8.db.DBManager.setTeamsForUser(DBManager.java:196) [Practice8/:?]
+	at ua.nure.danylenko.practice8.Demo.main(Demo.java:55) [Practice8/:?]
+Caused by: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '3-1' for key 'PRIMARY'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:117) ~[mysql-connector-java-8.0.17.jar:8.0.17]
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97) ~[mysql-connector-java-8.0.17.jar:8.0.17]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-java-8.0.17.jar:8.0.17]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953) ~[mysql-connector-java-8.0.17.jar:8.0.17]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1092) ~[mysql-connector-java-8.0.17.jar:8.0.17]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1040) ~[mysql-connector-java-8.0.17.jar:8.0.17]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1340) ~[mysql-connector-java-8.0.17.jar:8.0.17]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1025) ~[mysql-connector-java-8.0.17.jar:8.0.17]
+	at ua.nure.danylenko.practice8.db.DBManager.setTeamForUser(DBManager.java:225) ~[Practice8/:?]
+	... 2 more

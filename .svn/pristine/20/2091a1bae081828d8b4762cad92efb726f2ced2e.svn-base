@@ -1,0 +1,32 @@
+
+DROP DATABASE IF EXISTS p8;
+CREATE DATABASE IF NOT EXISTS p8;
+USE p8;
+
+CREATE TABLE users (
+	id INT PRIMARY KEY AUTO_INCREMENT,
+	login VARCHAR(12) UNIQUE NOT NULL
+);
+INSERT INTO users VALUES (DEFAULT, 'ivanov');
+
+
+CREATE TABLE teams (
+	id INT PRIMARY KEY AUTO_INCREMENT,
+	name VARCHAR(12) UNIQUE NOT NULL
+);
+
+INSERT INTO teams VALUES (DEFAULT, 'teamA');
+
+
+CREATE TABLE users_teams (
+	user_id INT NOT NULL,
+	team_id INT NOT NULL,
+	PRIMARY KEY (user_id, team_id),
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
+    FOREIGN KEY (team_id) REFERENCES teams(id) ON DELETE CASCADE
+);
+
+/*
+GRANT ALL PRIVILEGES ON testdb.* TO testuser@localhost IDENTIFIED BY 'testpassword';
+
+*/
